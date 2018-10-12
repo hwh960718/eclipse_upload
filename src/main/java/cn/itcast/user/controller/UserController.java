@@ -13,6 +13,11 @@ import cn.itcast.user.service.UserService;
 
 @RequestMapping("user")
 @Controller
+/**
+ * user控制器
+ * @author Administrator
+ *
+ */
 public class UserController {
 
 	@Autowired
