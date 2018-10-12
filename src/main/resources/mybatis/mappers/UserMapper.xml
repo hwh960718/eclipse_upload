@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.user.mapper.UserMapper">
+
+	<select id="queryUserList" resultType="user">
+		SELECT * FROM tb_user
+	</select>
+
+	<select id="queryUserPageInfo" parameterType="queryInfo"
+		resultType="user">
+		SELECT * FROM tb_user
+		limit #{start},#{rows}
+	</select>
+	<select id="queryUserCount" resultType="int">
+		SELECT count(*) FROM
+		tb_user
+	</select>
+</mapper>
